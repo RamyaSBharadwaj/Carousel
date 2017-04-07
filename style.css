@@ -1,0 +1,72 @@
+.carousel-caption {
+    padding-bottom: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-inner {
+    padding-left: 10%;
+    overflow: visible;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+    font-size: 100px;
+    margin-top: -60px;
+    font-style: normal;
+    font-weight: 100;
+}
+
+.carousel-control .glyphicon-chevron-left {
+    margin-left: -100px;
+}
+
+.carousel-control .glyphicon-chevron-right {
+    margin-right: -40px;
+}
+
+
+/* make slide widths more responsive */
+
+@media only screen and (min-width: 1600px) {
+    .col-sm-2 {
+        width: 18%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .col-sm-3 {
+        width: 22%;
+    }
+    .carousel-control .glyphicon-chevron-left {
+        margin-left: -70px;
+    }
+    .carousel-control .glyphicon-chevron-right {
+        margin-right: -20px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .col-sm-4 {
+        width: 29%;
+    }
+    .carousel-control .glyphicon-chevron-left {
+        margin-left: -70px;
+    }
+    .carousel-control .glyphicon-chevron-right {
+        margin-right: -20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .col-sm-10 {
+        width: 90%;
+    }
+}

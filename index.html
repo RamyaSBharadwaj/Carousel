@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+    <!--<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div ng-controller="CarouselController">
+        <uib-carousel active="active" interval="3000" no-wrap="false">
+            <uib-slide ng-repeat="row in chunkedSlides">
+                <div class="row">
+                    <div ng-repeat="slide in row track by $index" class="slide" ng-class="getSlideClass(chunkSize)" smart-chunking>
+                        <img ng-src="{{slide.image}}">
+                        <div class="carousel-caption">
+                            <h4>Slide {{slide.id}}</h4>
+                            <p>{{slide.text}}</p>
+                        </div>
+                    </div>
+                </div>
+            </uib-slide>
+        </uib-carousel>
+    </div>
+</body>
+
+</html>
